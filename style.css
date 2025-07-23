@@ -1,0 +1,135 @@
+/* General Reset & Box Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  padding: 40px 20px;
+  color: #333;
+}
+
+/* Container */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* Product List */
+#product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.product {
+  background-color: #fff;
+  border: 1px solid #dcdcdc;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1 1 200px;
+  min-width: 250px;
+  transition: box-shadow 0.3s ease;
+}
+
+.product:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.product h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.product p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.product button {
+  background-color: #3498db;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product button:hover {
+  background-color: #2c80b4;
+  transform: scale(1.05);
+}
+
+/* Shopping Cart */
+#cart-items {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+#empty-cart {
+  font-style: italic;
+  color: #a0a0a0;
+  margin-bottom: 20px;
+}
+
+/* Cart Total + Checkout */
+#cart-total {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+#checkout-button {
+  background-color: #27ae60;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#checkout-button:hover {
+  background-color: #219150;
+  transform: scale(1.05);
+}
+
+/* Responsive Improvements */
+@media only screen and (max-width: 600px) {
+  .product {
+    flex: 1 1 100%;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
